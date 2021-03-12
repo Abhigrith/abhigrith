@@ -1,16 +1,18 @@
 package com.example.abhigrith.Parent;
 
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.abhigrith.R;
-import com.example.abhigrith.databinding.ActivityParentLoginBinding;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.abhigrith.R;
+import com.example.abhigrith.databinding.ActivityParentLoginBinding;
+
 public class ParentLoginActivity extends AppCompatActivity {
 
     private ActivityParentLoginBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +21,14 @@ public class ParentLoginActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        binding.btnLogin.setOnClickListener(v -> {
+        binding.btnParentLoginLogin.setOnClickListener(v -> {
 
         });
-
-        binding.btnParentLoginSkip.setOnClickListener(v ->{
+        binding.btnParentLoginSkip.setOnClickListener(v -> {
             Intent intent = new Intent(this, ParentDashboardActivity.class);
             startActivity(intent);
         });
-
-        binding.btnParentLoginRegister.setOnClickListener(v ->{
+        binding.btnParentLoginRegister.setOnClickListener(v -> {
             Intent intent = new Intent(this, ParentRegisterActivity.class);
             startActivity(intent);
         });

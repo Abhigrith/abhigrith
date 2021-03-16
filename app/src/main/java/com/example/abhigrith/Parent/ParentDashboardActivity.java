@@ -1,10 +1,10 @@
 package com.example.abhigrith.Parent;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.abhigrith.databinding.ActivityParentDashboardBinding;
 
@@ -18,7 +18,7 @@ public class ParentDashboardActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        binding.btnDashboardProfile.setOnClickListener(v ->{
+        binding.toolbar.toolbarProfile.setOnClickListener(v -> {
             Intent intent = new Intent(this, ParentProfileActivity.class);
             startActivity(intent);
         });

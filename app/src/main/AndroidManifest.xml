@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Abhigrith">
-        <activity android:name=".Parent.ParentSelectorActivity"></activity>
+        <activity android:name=".Parent.ParentSelectorActivity" />
         <activity android:name=".Parent.ParentSelectionActivity" />
         <activity android:name=".Parent.ParentRegisterActivity" />
         <activity android:name=".Parent.ParentProfileActivity" />

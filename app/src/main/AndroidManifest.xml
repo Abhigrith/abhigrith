@@ -9,13 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Abhigrith">
-        <activity android:name=".Parent.ProfileActivity"></activity>
-        <activity android:name=".Parent.ParentSelectorActivity" />
-        <activity android:name=".Parent.ParentSelectionActivity" />
-        <activity android:name=".Parent.ParentRegisterActivity" />
-        <activity android:name=".Parent.ParentProfileActivity" />
-        <activity android:name=".Parent.ParentDashboardActivity" />
-        <activity android:name=".Parent.ParentLoginActivity" />
+        <activity android:name=".parent.activities.ParentSelectorActivity" />
+        <activity android:name=".parent.activities.ParentSelectionActivity" />
+        <activity android:name=".parent.activities.ParentRegisterActivity" />
+        <activity android:name=".parent.activities.ParentProfileActivity" />
+        <activity android:name=".parent.activities.ParentDashboardActivity" />
+        <activity android:name=".parent.activities.ParentLoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

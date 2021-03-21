@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/wallpaper"
     android:orientation="vertical"
-    tools:context=".Parent.ParentRegisterActivity">
+    tools:context=".parent.activities.ParentRegisterActivity">
 
     <TextView
-        android:id="@+id/tv_application_name"
+        android:id="@+id/tv_app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -22,7 +23,7 @@
         android:id="@+id/tv_activity_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_application_name"
+        android:layout_below="@+id/tv_app_name"
         android:layout_marginTop="15dp"
         android:text="Create a account"
         android:textAlignment="center"
@@ -40,45 +41,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/et_parent_register_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/et_parent_register_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
-
             <TextView
-                android:id="@+id/tv_parent_01_name"
+                android:id="@+id/tv_parent_register_01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_application_name"
                 android:layout_marginTop="15dp"
-                android:text="Parent 01"
+                android:text="First Parent"
                 android:textAlignment="center"
                 android:textColor="#FFEB3B"
                 android:textSize="20sp" />
@@ -100,7 +68,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/et_parent_register_gender"
+                android:id="@+id/et_parent_register_gender_01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -115,7 +83,26 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/et_parent_register_income"
+                android:id="@+id/et_parent_register_date_of_birth_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:hint="Date Of Birth"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_income_01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -130,7 +117,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/et_parent_register_aadhar_number"
+                android:id="@+id/et_parent_register_aadhaar_number_01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -145,7 +132,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/et_parent_register_pan_number"
+                android:id="@+id/et_parent_register_pan_number_01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -153,18 +140,18 @@
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/black"
                 android:hint="Pan Card Number"
-                android:inputType="number"
+                android:inputType="textCapWords"
                 android:padding="10dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/tv_parent_02_name"
+                android:id="@+id/tv_parent_register_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Parent 02"
+                android:text="Second Parent"
                 android:textAlignment="center"
                 android:textColor="#FFEB3B"
                 android:textSize="20sp" />
@@ -201,6 +188,25 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/et_parent_register_date_of_birth_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:hint="Date Of Birth"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
                 android:id="@+id/et_parent_register_income_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -216,7 +222,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/et_parent_register_aadhar_number_02"
+                android:id="@+id/et_parent_register_aadhaar_number_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -239,14 +245,218 @@
                 android:layout_marginEnd="16dp"
                 android:background="@android:color/black"
                 android:hint="Pan Card Number"
+                android:inputType="textCapWords"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_parent_register_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Address"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_primary_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="Primary Address"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_secondary_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="Secondary Address"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_address_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_address_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="District"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_address_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="Pincode"
                 android:inputType="number"
                 android:padding="10dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textSize="14sp" />
 
+            <EditText
+                android:id="@+id/et_parent_register_address_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="State"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_parent_register_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Contact"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_primary_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:hint="Primary Phone Number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_secondary_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:hint="Secondary Phone Number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_parent_register_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Account"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_parent_register_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/black"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+
             <Button
-                android:id="@+id/btn_parent_register_register"
+                android:id="@+id/btn_parent_register_action"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -267,8 +477,5 @@
                 android:textSize="13sp" />
 
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
-
-
 </RelativeLayout>

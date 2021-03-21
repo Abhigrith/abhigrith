@@ -1,11 +1,10 @@
-package com.example.abhigrith.Parent;
+package com.example.abhigrith.parent.activities;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.abhigrith.databinding.ActivityParentRegisterBinding;
 import com.example.abhigrith.databinding.ActivityParentSelectionBinding;
 
 public class ParentSelectionActivity extends AppCompatActivity {

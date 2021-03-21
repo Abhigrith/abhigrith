@@ -1,4 +1,4 @@
-package com.example.abhigrith.Parent;
+package com.example.abhigrith.parent.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

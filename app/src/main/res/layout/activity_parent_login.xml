@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
-    tools:context=".Parent.ParentLoginActivity">
+    tools:context=".parent.activities.ParentLoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,55 +57,48 @@
             android:textColorHint="#FFFFFF"
             android:textSize="14sp" />
 
-        <Button
-            android:id="@+id/btn_parent_login_login"
+        <TextView
+            android:id="@+id/tv_parent_login_forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Forgot Password ?"
+            android:textAlignment="center"
+            android:textColor="#FDD835"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_parent_login_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/aclonica"
             android:text="Login"
             android:textSize="13sp" />
 
         <TextView
-            android:id="@+id/tv_parent_login_forgotPassword"
+            android:id="@+id/tv_parent_login_create_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Forgot Password ?"
+            android:layout_marginTop="60dp"
+            android:text="New Here?  Create Account By Clicking on Register Below"
             android:textAlignment="center"
-            android:textColor="#FDD835"
-            android:textStyle="bold" />
-
-        <ProgressBar
-            android:id="@+id/pb_parent_login_progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:visibility="invisible" />
+            android:textColor="#FFEB3B" />
 
         <Button
             android:id="@+id/btn_parent_login_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/aclonica"
             android:text="Register"
             android:textSize="13sp" />
 
-        <Button
-            android:id="@+id/btn_parent_login_skip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/aclonica"
-            android:text="Skip"
-            android:textSize="13sp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.abhigrith.Parent.ParentDashboardActivity;
-import com.example.abhigrith.Parent.ParentLoginActivity;
+import com.example.abhigrith.parent.activities.ParentLoginActivity;
 import com.example.abhigrith.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

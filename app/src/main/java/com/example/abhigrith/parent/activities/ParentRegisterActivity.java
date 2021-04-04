@@ -108,7 +108,6 @@ public class ParentRegisterActivity extends AppCompatActivity implements View.On
                         }
                     }
                 });
-
     }
 
     private boolean checkWhetherAllFieldsAreFilledAndCorrect() {
@@ -288,8 +287,6 @@ public class ParentRegisterActivity extends AppCompatActivity implements View.On
                 break;
         }
     }
-
-
 
     private boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();

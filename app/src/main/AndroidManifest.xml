@@ -12,7 +12,7 @@
         <activity android:name=".parent.activities.ParentSelectorActivity" />
         <activity android:name=".parent.activities.ParentSelectionActivity" />
         <activity android:name=".parent.activities.ParentRegisterActivity" />
-        <activity android:name=".parent.activities.ParentProfileActivity" />
+        <activity android:name=".parent.activities.ParentProfileActivity"/>
         <activity android:name=".parent.activities.ParentDashboardActivity" />
         <activity android:name=".parent.activities.ParentLoginActivity" />
         <activity android:name=".MainActivity">

@@ -1,6 +1,7 @@
 package com.example.abhigrith.parent.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +22,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class ParentLoginActivity extends AppCompatActivity {
 
     private static final String TAG = "ParentLogin";
+    private static final String APP_SHARED_PREFERENCES = "APP-PREFERENCES";
+    private static final String PARENT_EMAIL_ID = "parent-email-id";
+    private static final String COLLECTION_PATH = "parents_info";
+
 
     private ActivityParentLoginBinding binding;
     private FirebaseFirestore firestoreInstance;
@@ -35,7 +40,7 @@ public class ParentLoginActivity extends AppCompatActivity {
         setContentView(view);
 
         firestoreInstance = FirebaseFirestore.getInstance();
-        parentInfoCollection = firestoreInstance.collection("parents_info");
+        parentInfoCollection = firestoreInstance.collection(COLLECTION_PATH);
 
         binding.btnParentLoginAction.setOnClickListener(v -> {
             String email = getEmail();
@@ -48,6 +53,10 @@ public class ParentLoginActivity extends AppCompatActivity {
 
             // And then allow to login them
             doesUserExistsAndGetUserLoggedIn(email,password);
+
+//            SharedPreferences preferences = getSharedPreferences("APP-PREFERENCES",MODE_PRIVATE);
+//            String id = preferences.getString("parent-email-id","null");
+//            Log.d(TAG, "onCreate: " + id);
         });
 
         binding.btnParentLoginRegister.setOnClickListener(v -> {
@@ -72,6 +81,9 @@ public class ParentLoginActivity extends AppCompatActivity {
                                     Toast.makeText(ParentLoginActivity.this,"You have entered the wrong password.Please enter the correct password.",Toast.LENGTH_SHORT).show();
                                     return;
                                 }
+
+                                SharedPreferences preferences = getSharedPreferences(APP_SHARED_PREFERENCES,MODE_PRIVATE);
+                                preferences.edit().putString(PARENT_EMAIL_ID,model.getEmailAddress()).apply();
 
                                 Toast.makeText(ParentLoginActivity.this,"Getting you logged in inside the app.",Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(ParentLoginActivity.this,ParentDashboardActivity.class));

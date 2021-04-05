@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper"
+    android:background="@drawable/background_auth"
     android:orientation="vertical"
     tools:context=".parent.activities.ParentProfileActivity">
 
@@ -11,12 +11,15 @@
         android:id="@+id/tv_application_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Abhigrith"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/samarkan"
+        android:letterSpacing="0.1"
+        android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="#FFEB3B"
-        android:textSize="35sp" />
+        android:textColor="@color/white"
+        android:textSize="65sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_activity_name"
@@ -26,7 +29,7 @@
         android:layout_marginTop="15dp"
         android:text="Profile Page"
         android:textAlignment="center"
-        android:textColor="#FFEB3B"
+        android:textColor="#ffffff"
         android:textSize="20sp" />
 
 
@@ -48,7 +51,6 @@
                 android:layout_marginTop="15dp"
                 android:text="First Parent"
                 android:textAlignment="center"
-                android:textColor="#FFEB3B"
                 android:textSize="20sp" />
 
             <TextView
@@ -144,7 +146,6 @@
                 android:layout_marginTop="15dp"
                 android:text="Second Parent"
                 android:textAlignment="center"
-                android:textColor="#FFEB3B"
                 android:textSize="20sp" />
 
             <TextView
@@ -240,104 +241,113 @@
                 android:layout_marginTop="15dp"
                 android:text="Address"
                 android:textAlignment="center"
-                android:textColor="#FFEB3B"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/et_parent_profile_primary_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Primary Address"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_parent_profile_secondary_address"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Secondary Address"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
 
-            <EditText
-                android:id="@+id/et_parent_profile_address_city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="City"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/et_parent_profile_primary_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="Primary Address"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/et_parent_profile_address_district"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="District"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_parent_profile_address_pincode"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Pincode"
-                android:inputType="number"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
 
-            <EditText
-                android:id="@+id/et_parent_profile_address_state"
+                <EditText
+                    android:id="@+id/et_parent_profile_secondary_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="Secondary Address"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="State"
-                android:inputType="text"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/et_parent_profile_address_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="City"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/et_parent_profile_address_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="District"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/et_parent_profile_address_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="Pincode"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/et_parent_profile_address_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="State"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/tv_parent_profile_account"
@@ -346,7 +356,6 @@
                 android:layout_marginTop="15dp"
                 android:text="Account"
                 android:textAlignment="center"
-                android:textColor="#FFEB3B"
                 android:textSize="20sp" />
 
             <TextView
@@ -365,37 +374,40 @@
                 android:textColorHint="#FFFFFF"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/et_parent_profile_primary_phone"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Primary Phone Number"
-                android:inputType="number"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
 
-            <EditText
-                android:id="@+id/et_parent_profile_secondary_phone"
+                <EditText
+                    android:id="@+id/et_parent_profile_primary_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="Primary Phone Number"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/black"
-                android:ems="10"
-                android:hint="Secondary Phone Number"
-                android:inputType="number"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/et_parent_profile_secondary_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_button_auth"
+                    android:hint="Secondary Phone Number"
+                    android:text="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/tv_parent_profile_eligibility_status"

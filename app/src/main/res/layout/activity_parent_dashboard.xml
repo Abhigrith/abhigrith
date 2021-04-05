@@ -12,36 +12,37 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
 
         <Button
             android:id="@+id/btn_dashboard_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Profile"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="30sp"
-            android:textAlignment="center"/>
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn_dashboard_selection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Selection"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="24sp"
-            android:textAlignment="center"/>
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btn_dashboard_selector"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Selector"
+            android:textAlignment="center"
             android:textAllCaps="true"
-            android:textSize="30sp"
-            android:textAlignment="center"/>
+            android:textSize="30sp" />
 
     </LinearLayout>
 

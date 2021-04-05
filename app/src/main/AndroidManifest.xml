@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Abhigrith">
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".orphanage.activities.OrphanageDashboardActivity" />
         <activity android:name=".orphanage.activities.OrphanageLoginActivity" />
         <activity android:name=".orphanage.activities.OrphanageRegisterActivity" />
@@ -18,7 +19,7 @@
         <activity android:name=".parent.activities.ParentProfileActivity" />
         <activity android:name=".parent.activities.ParentDashboardActivity" />
         <activity android:name=".parent.activities.ParentLoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

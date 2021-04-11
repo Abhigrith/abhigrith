@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper"
+    android:background="@drawable/background_auth"
     tools:context=".parent.activities.ParentLoginActivity">
 
     <LinearLayout
@@ -14,59 +14,59 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_application_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/aclonica"
-            android:text="Abhigrith"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/samarkan"
+            android:letterSpacing="0.1"
+            android:text="@string/app_name"
             android:textAlignment="center"
-            android:textColor="#FFEB3B"
-            android:textSize="25sp" />
-
-        <EditText
-            android:id="@+id/et_parent_login_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/black"
-            android:ems="10"
-            android:fontFamily="@font/aclonica"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/et_parent_login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/black"
-            android:fontFamily="@font/aclonica"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textSize="14sp" />
+            android:textColor="@color/white"
+            android:textSize="65sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_parent_login_forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Forgot Password ?"
+            android:text="Parent Login"
             android:textAlignment="center"
-            android:textColor="#FDD835"
-            android:textStyle="bold" />
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/et_parent_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_auth"
+                android:hint="Registered Email Id"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <EditText
+                android:id="@+id/et_parent_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_auth"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btn_parent_login_action"
@@ -79,14 +79,15 @@
             android:text="Login"
             android:textSize="13sp" />
 
+
         <TextView
             android:id="@+id/tv_parent_login_create_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:text="New Here?  Create Account By Clicking on Register Below"
+            android:text="New Here?"
             android:textAlignment="center"
-            android:textColor="#FFEB3B" />
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn_parent_login_register"

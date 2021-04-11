@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_orphanage_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="City" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_pincode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Pincode" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="State" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Email" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_primary_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Primary Phone No" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_secondary_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Secondary Phone No" />
+
+</LinearLayout>

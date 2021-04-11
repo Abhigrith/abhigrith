@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Abhigrith">
+        <activity android:name=".adoption.activities.OrphanageListActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".orphanage.activities.OrphanageDashboardActivity" />
         <activity android:name=".orphanage.activities.OrphanageLoginActivity" />
         <activity android:name=".orphanage.activities.OrphanageRegisterActivity" />
         <activity android:name=".parent.activities.ParentSelectorActivity" />
-        <activity android:name=".parent.activities.ParentSelectionActivity" />
         <activity android:name=".parent.activities.ParentRegisterActivity" />
         <activity android:name=".parent.activities.ParentProfileActivity" />
         <activity android:name=".parent.activities.ParentDashboardActivity" />

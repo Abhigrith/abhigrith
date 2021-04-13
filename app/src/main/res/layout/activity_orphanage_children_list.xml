@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_orphanage_list"
+    android:id="@+id/ll_orphanage_children_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".adoption.activities.OrphanageListActivity">
+    tools:context=".adoption.activities.OrphanageChildrenListActivity">
 
     <TextView
-        android:id="@+id/tv_activity_orphanage_list_title"
+        android:id="@+id/tv_orphanage_children_list_activity_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="List Of Orphanages"
-        android:textAlignment="center"
-        android:textSize="30sp"/>
+        android:text="@string/orphanage_title"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="169dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_activity_orphanage_list_orphanages"
+        android:id="@+id/rv_orphanage_children_list_activity_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        tools:listitem="@layout/recycler_view_orphanage_list_item" />
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recycler_view_child_list_item" />
 
 </LinearLayout>

@@ -8,10 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.abhigrith.R;
 import com.example.abhigrith.adoption.interfaces.OnDocumentCheckListener;
 import com.example.abhigrith.adoption.interfaces.OnRecyclerViewItemClickListener;
 import com.example.abhigrith.adoption.models.ChildModel;
 import com.example.abhigrith.databinding.RecyclerViewChildListItemBinding;
+import com.example.abhigrith.enums.Gender;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
@@ -70,6 +72,12 @@ public class OrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<Child
             binding.tvChildFullName.setText(model.getChildFullName());
             Log.d(TAG, "bindOrphanageChildView: " + model.getChildDateOfBirth());
             binding.tvChildDateOfBirth.setText(model.getChildDateOfBirth());
+
+            if(model.getChildGender().equals(Gender.MALE.getGender())){
+                binding.ivChildAnimated.setImageResource(R.drawable.male_child_profile);
+            } else if(model.getChildGender().equals(Gender.FEMALE.getGender())) {
+                binding.ivChildAnimated.setImageResource(R.drawable.female_child_profile);
+            }
 
             Log.d(TAG, "bindOrphanageChildView: " + model.getChildGender());
             Log.d(TAG, "bindOrphanageChildView: " + model.getChildId());

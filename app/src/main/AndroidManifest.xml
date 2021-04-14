@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Abhigrith">
-        <activity android:name=".adoption.activities.OrphanageChildDetailActivity"></activity>
+        <activity android:name=".adoption.activities.OrphanageChildDetailActivity" />
         <activity android:name=".adoption.activities.OrphanageChildrenListActivity" />
         <activity android:name=".adoption.activities.OrphanageListActivity" />
         <activity android:name=".DashboardActivity" />

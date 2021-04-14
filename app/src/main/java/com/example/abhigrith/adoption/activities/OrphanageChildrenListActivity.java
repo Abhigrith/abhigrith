@@ -56,7 +56,7 @@ public class OrphanageChildrenListActivity extends AppCompatActivity implements 
 
         if (!orphanageDocumentName.equals("null") && !orphanageName.equals("null")) {
             setupOrphanageList(orphanageDocumentName);
-            binding.tvOrphanageChildrenListActivityTitle.setText(getString(R.string.orphanage_title, orphanageName));
+            // binding.tvOrphanageChildrenListActivityTitle.setText(getString(R.string.orphanage_title, orphanageName));
         }
     }
 

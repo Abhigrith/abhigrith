@@ -12,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/orphanage_title"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="169dp" />
+        android:textAlignment="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_orphanage_children_list_activity_list"

@@ -18,10 +18,4 @@
         android:layout_height="wrap_content"
         tools:text="Date Of Birth" />
 
-    <TextView
-        android:id="@+id/tv_child_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Gender" />
-
 </LinearLayout>

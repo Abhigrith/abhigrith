@@ -1,6 +1,9 @@
 package com.example.abhigrith.adoption.models;
 
-public class ChildModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ChildModel implements Parcelable {
 
     private String childDateOfBirth;
     private String childFullName;
@@ -19,6 +22,51 @@ public class ChildModel {
         this.childGender = childGender;
         this.childId = childId;
         this.childImageUrl = childImageUrl;
+    }
+
+    protected ChildModel(Parcel in) {
+        childDateOfBirth = in.readString();
+        childFullName = in.readString();
+        childGender = in.readString();
+        childId = in.readString();
+        childImageUrl = in.readString();
+    }
+
+    public static final Creator<ChildModel> CREATOR = new Creator<ChildModel>() {
+        @Override
+        public ChildModel createFromParcel(Parcel in) {
+            return new ChildModel(in);
+        }
+
+        @Override
+        public ChildModel[] newArray(int size) {
+            return new ChildModel[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(childDateOfBirth);
+        dest.writeString(childFullName);
+        dest.writeString(childGender);
+        dest.writeString(childId);
+        dest.writeString(childImageUrl);
+    }
+
+    @Override
+    public String toString() {
+        return "ChildModel{" +
+                "childDateOfBirth='" + childDateOfBirth + '\'' +
+                ", childFullName='" + childFullName + '\'' +
+                ", childGender='" + childGender + '\'' +
+                ", childId='" + childId + '\'' +
+                ", childImageUrl='" + childImageUrl + '\'' +
+                '}';
     }
 
     public String getChildDateOfBirth() {

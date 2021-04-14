@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".adoption.activities.OrphanageChildDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_orphanage_child_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Child All Details Mentioned Here"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/iv_orphanage_child_detail_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        tools:srcCompat="@drawable/male_child_profile" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_child_detail_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Child FullName" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_child_detail_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Child Gender" />
+
+    <TextView
+        android:id="@+id/tv_orphanage_child_detail_date_of_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Child Date-Of-Birth" />
+
+    <Button
+        android:id="@+id/btn_orphanage_child_detail_adopt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adopt This Kid" />
+
+</LinearLayout>

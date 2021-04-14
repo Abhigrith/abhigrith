@@ -2,12 +2,14 @@ package com.example.abhigrith.adoption.adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.abhigrith.adoption.interfaces.OnDocumentCheckListener;
+import com.example.abhigrith.adoption.interfaces.OnRecyclerViewItemClickListener;
 import com.example.abhigrith.adoption.models.ChildModel;
 import com.example.abhigrith.databinding.RecyclerViewChildListItemBinding;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -18,10 +20,12 @@ public class OrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<Child
     private FirestoreRecyclerOptions<ChildModel> options;
     private RecyclerViewChildListItemBinding binding;
     private OnDocumentCheckListener onDocumentCheckListener;
+    private OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
 
-    public OrphanageChildrenListAdapter(OnDocumentCheckListener onDocumentCheckListener, @NonNull FirestoreRecyclerOptions<ChildModel> options) {
+    public OrphanageChildrenListAdapter(OnDocumentCheckListener onDocumentCheckListener, OnRecyclerViewItemClickListener onRecyclerViewItemClickListener, @NonNull FirestoreRecyclerOptions<ChildModel> options) {
         super(options);
         this.onDocumentCheckListener = onDocumentCheckListener;
+        this.onRecyclerViewItemClickListener = onRecyclerViewItemClickListener;
         this.options = options;
     }
 
@@ -46,13 +50,19 @@ public class OrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<Child
         }
     }
 
-    public static class OrphanageChildrenViewHolder extends RecyclerView.ViewHolder {
+    public class OrphanageChildrenViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private static final String TAG = "ViewHolder";
         private RecyclerViewChildListItemBinding binding;
 
         public OrphanageChildrenViewHolder(@NonNull RecyclerViewChildListItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            onRecyclerViewItemClickListener.onOrphanageItemClick(getAbsoluteAdapterPosition());
         }
 
         public void bindOrphanageChildView(ChildModel model) {
@@ -60,9 +70,8 @@ public class OrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<Child
             binding.tvChildFullName.setText(model.getChildFullName());
             Log.d(TAG, "bindOrphanageChildView: " + model.getChildDateOfBirth());
             binding.tvChildDateOfBirth.setText(model.getChildDateOfBirth());
-            Log.d(TAG, "bindOrphanageChildView: " + model.getChildGender());
-            binding.tvChildGender.setText(model.getChildGender());
 
+            Log.d(TAG, "bindOrphanageChildView: " + model.getChildGender());
             Log.d(TAG, "bindOrphanageChildView: " + model.getChildId());
             Log.d(TAG, "bindOrphanageChildView: " + model.getChildImageUrl());
         }

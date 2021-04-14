@@ -7,20 +7,16 @@
     android:orientation="vertical"
     tools:context=".adoption.activities.OrphanageListActivity">
 
-    <TextView
-        android:id="@+id/tv_activity_orphanage_list_title"
+    <include
+        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="List Of Orphanages"
-        android:textAlignment="center"
-        android:textSize="30sp"/>
+        android:layout_height="wrap_content" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_activity_orphanage_list_orphanages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:background="@drawable/background_splash"
         android:orientation="vertical"
         tools:listitem="@layout/recycler_view_orphanage_list_item" />
 

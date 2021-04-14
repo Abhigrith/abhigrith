@@ -1,47 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_splash"
     android:orientation="vertical"
     tools:context=".adoption.activities.OrphanageChildDetailActivity">
 
-    <TextView
-        android:id="@+id/tv_orphanage_child_detail_title"
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@id/action_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Child All Details Mentioned Here"
-        android:textAlignment="center" />
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/iv_orphanage_child_detail_profile_image"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        tools:srcCompat="@drawable/male_child_profile" />
+        <ImageView
+            android:id="@+id/iv_orphanage_child_detail_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:srcCompat="@drawable/male_child_profile" />
 
-    <TextView
-        android:id="@+id/tv_orphanage_child_detail_full_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Child FullName" />
+        <TextView
+            android:id="@+id/tv_orphanage_child_detail_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Child FullName"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
 
-    <TextView
-        android:id="@+id/tv_orphanage_child_detail_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Child Gender" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:weightSum="2">
 
-    <TextView
-        android:id="@+id/tv_orphanage_child_detail_date_of_birth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Child Date-Of-Birth" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gender"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btn_orphanage_child_detail_adopt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Adopt This Kid" />
+            <TextView
+                android:id="@+id/tv_orphanage_child_detail_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-</LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Date-Of-Birth"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_orphanage_child_detail_date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="20-07-2001"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_orphanage_child_detail_adopt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/round_button_auth"
+            android:text="Adopt This Kid" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

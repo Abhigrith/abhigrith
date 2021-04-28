@@ -7,7 +7,6 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.abhigrith.R;
 import com.example.abhigrith.adoption.adapters.OrphanageChildrenListAdapter;
 import com.example.abhigrith.adoption.interfaces.OnDocumentCheckListener;
 import com.example.abhigrith.adoption.interfaces.OnRecyclerViewItemClickListener;
@@ -60,21 +59,6 @@ public class OrphanageChildrenListActivity extends AppCompatActivity implements 
         }
     }
 
-    private void setupOrphanageList(String orphanageDocumentName) {
-        Query query = firestore.collection(ORPHANAGE_COLLECTION_PATH).document(orphanageDocumentName).collection(ORPHANAGE_CHILDREN_COLLECTION_PATH);
-        Log.d(TAG, "This is " + query.toString());
-
-        options = new FirestoreRecyclerOptions.Builder<ChildModel>()
-                .setQuery(query, ChildModel.class)
-                .build();
-
-        Log.d(TAG, "These are some events " + options.getSnapshots().toString());
-
-        adapter = new OrphanageChildrenListAdapter(this, this, options);
-        binding.rvOrphanageChildrenListActivityList.setLayoutManager(new LinearLayoutManager(OrphanageChildrenListActivity.this));
-        binding.rvOrphanageChildrenListActivityList.setAdapter(adapter);
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -89,15 +73,31 @@ public class OrphanageChildrenListActivity extends AppCompatActivity implements 
     }
 
     @Override
-    public void onOrphanageItemClick(int position) {
+    public void onListItemClick(int position) {
         ChildModel child = (ChildModel) adapter.getItem(position);
         Log.d(TAG, "Child : " + child.toString());
 
         Bundle bundle = new Bundle();
         bundle.putParcelable(CHILD_DETAIL_MODEL,child);
+        bundle.putString(ORPHANAGE_DOCUMENT_NAME,orphanageDocumentName);
 
         Intent intent = new Intent(OrphanageChildrenListActivity.this,OrphanageChildDetailActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    private void setupOrphanageList(String orphanageDocumentName) {
+        Query query = firestore.collection(ORPHANAGE_COLLECTION_PATH).document(orphanageDocumentName).collection(ORPHANAGE_CHILDREN_COLLECTION_PATH);
+        Log.d(TAG, "This is " + query.toString());
+
+        options = new FirestoreRecyclerOptions.Builder<ChildModel>()
+                .setQuery(query, ChildModel.class)
+                .build();
+
+        Log.d(TAG, "These are some events " + options.getSnapshots().toString());
+
+        adapter = new OrphanageChildrenListAdapter(this, this, options);
+        binding.rvOrphanageChildrenListActivityList.setLayoutManager(new LinearLayoutManager(OrphanageChildrenListActivity.this));
+        binding.rvOrphanageChildrenListActivityList.setAdapter(adapter);
     }
 }

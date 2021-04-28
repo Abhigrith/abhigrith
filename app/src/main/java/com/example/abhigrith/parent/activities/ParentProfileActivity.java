@@ -1,13 +1,12 @@
 package com.example.abhigrith.parent.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.abhigrith.databinding.ActivityParentProfileBinding;
 import com.example.abhigrith.enums.AdoptionRequestStatus;

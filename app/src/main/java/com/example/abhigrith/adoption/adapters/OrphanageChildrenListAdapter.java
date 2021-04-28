@@ -64,7 +64,7 @@ public class OrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<Child
 
         @Override
         public void onClick(View v) {
-            onRecyclerViewItemClickListener.onOrphanageItemClick(getAbsoluteAdapterPosition());
+            onRecyclerViewItemClickListener.onListItemClick(getAbsoluteAdapterPosition());
         }
 
         public void bindOrphanageChildView(ChildModel model) {

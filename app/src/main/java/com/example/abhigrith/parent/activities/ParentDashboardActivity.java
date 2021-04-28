@@ -30,7 +30,7 @@ public class ParentDashboardActivity extends AppCompatActivity {
         });
 
         binding.btnDashboardSelector.setOnClickListener(v ->{
-            Intent intent = new Intent(this,ParentSelectorActivity.class);
+            Intent intent = new Intent(this,ParentAdoptionRequestActivity.class);
             startActivity(intent);
         });
     }

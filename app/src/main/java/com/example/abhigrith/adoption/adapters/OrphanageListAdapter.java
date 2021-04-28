@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.abhigrith.R;
 import com.example.abhigrith.adoption.interfaces.OnDocumentCheckListener;
 import com.example.abhigrith.adoption.interfaces.OnRecyclerViewItemClickListener;
 import com.example.abhigrith.databinding.RecyclerViewOrphanageListItemBinding;
@@ -67,7 +66,7 @@ public class OrphanageListAdapter extends FirestoreRecyclerAdapter<OrphanageMode
 
         @Override
         public void onClick(View v) {
-            onRecyclerViewItemClickListener.onOrphanageItemClick(getAbsoluteAdapterPosition());
+            onRecyclerViewItemClickListener.onListItemClick(getAbsoluteAdapterPosition());
         }
 
         private void bindOrphanageView(OrphanageModel model) {

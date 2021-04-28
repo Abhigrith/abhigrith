@@ -3,6 +3,11 @@ package com.example.abhigrith.adoption.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.firebase.firestore.DocumentReference;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChildModel implements Parcelable {
 
     private String childDateOfBirth;
@@ -10,19 +15,22 @@ public class ChildModel implements Parcelable {
     private String childGender;
     private String childId;
     private String childImageUrl;
+    private List<DocumentReference> childParentsAdoptionRequest;
 
     // Empty Constructor for firebase
     public ChildModel() {
 
     }
 
-    public ChildModel(String childDateOfBirth, String childFullName, String childGender, String childId, String childImageUrl) {
+    public ChildModel(String childDateOfBirth, String childFullName, String childGender, String childId, String childImageUrl, List<DocumentReference> childParentsAdoptionRequest) {
         this.childDateOfBirth = childDateOfBirth;
         this.childFullName = childFullName;
         this.childGender = childGender;
         this.childId = childId;
         this.childImageUrl = childImageUrl;
+        this.childParentsAdoptionRequest = childParentsAdoptionRequest;
     }
+
 
     protected ChildModel(Parcel in) {
         childDateOfBirth = in.readString();
@@ -30,6 +38,8 @@ public class ChildModel implements Parcelable {
         childGender = in.readString();
         childId = in.readString();
         childImageUrl = in.readString();
+        List<DocumentReference> parents = new ArrayList<DocumentReference>();
+        in.readList(parents,DocumentReference.class.getClassLoader());
     }
 
     public static final Creator<ChildModel> CREATOR = new Creator<ChildModel>() {
@@ -45,18 +55,20 @@ public class ChildModel implements Parcelable {
     };
 
     @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(childDateOfBirth);
         dest.writeString(childFullName);
         dest.writeString(childGender);
         dest.writeString(childId);
         dest.writeString(childImageUrl);
+        dest.writeList(childParentsAdoptionRequest);
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
 
     @Override
     public String toString() {
@@ -66,6 +78,7 @@ public class ChildModel implements Parcelable {
                 ", childGender='" + childGender + '\'' +
                 ", childId='" + childId + '\'' +
                 ", childImageUrl='" + childImageUrl + '\'' +
+                ", childParentsAdoptionRequest=" + childParentsAdoptionRequest +
                 '}';
     }
 

@@ -70,7 +70,7 @@ public class OrphanageListActivity extends AppCompatActivity implements OnRecycl
     }
 
     @Override
-    public void onOrphanageItemClick(int position) {
+    public void onListItemClick(int position) {
         if (!options.getSnapshots().isEmpty() && options.getSnapshots().getSnapshot(position).exists()) {
             String orphanageDocumentName = options.getSnapshots().getSnapshot(position).getId();
             Log.d(TAG, "OrphanageDocumentName: " + orphanageDocumentName);

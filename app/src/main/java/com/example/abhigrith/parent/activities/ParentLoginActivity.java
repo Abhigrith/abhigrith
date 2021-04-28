@@ -7,14 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.abhigrith.R;
 import com.example.abhigrith.databinding.ActivityParentLoginBinding;
 import com.example.abhigrith.parent.models.ParentsDetailModel;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -25,7 +22,6 @@ public class ParentLoginActivity extends AppCompatActivity {
     private static final String APP_SHARED_PREFERENCES = "APP-PREFERENCES";
     private static final String PARENT_EMAIL_ID = "parent-email-id";
     private static final String COLLECTION_PATH = "parents_info";
-
 
     private ActivityParentLoginBinding binding;
     private FirebaseFirestore firestoreInstance;

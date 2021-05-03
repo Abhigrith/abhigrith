@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_orphanage_list"
+    android:id="@+id/ll_orphanage_children_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".adoption.activities.OrphanageListActivity">
+    tools:context=".adoption.activities.AdoptionOrphanageChildrenListActivity">
 
     <include
         layout="@layout/app_bar_main"
@@ -13,11 +13,11 @@
         android:layout_height="wrap_content" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_activity_orphanage_list_orphanages"
+        android:id="@+id/rv_orphanage_children_list_activity_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_splash"
-        android:orientation="vertical"
-        tools:listitem="@layout/recycler_view_orphanage_list_item" />
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recycler_view_child_list_item" />
 
 </LinearLayout>

@@ -14,14 +14,14 @@ import com.example.abhigrith.orphanage.models.OrphanageModel;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-public class OrphanageListAdapter extends FirestoreRecyclerAdapter<OrphanageModel, OrphanageListAdapter.OrphanageViewHolder> {
+public class AdoptionOrphanageListAdapter extends FirestoreRecyclerAdapter<OrphanageModel, AdoptionOrphanageListAdapter.OrphanageViewHolder> {
 
     private FirestoreRecyclerOptions<OrphanageModel> options;
     private RecyclerViewOrphanageListItemBinding binding;
     private OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
     private OnDocumentCheckListener onDocumentCheckListener;
 
-    public OrphanageListAdapter(OnRecyclerViewItemClickListener onRecyclerViewItemClickListener, OnDocumentCheckListener onDocumentCheckListener, @NonNull FirestoreRecyclerOptions<OrphanageModel> options) {
+    public AdoptionOrphanageListAdapter(OnRecyclerViewItemClickListener onRecyclerViewItemClickListener, OnDocumentCheckListener onDocumentCheckListener, @NonNull FirestoreRecyclerOptions<OrphanageModel> options) {
         super(options);
         this.onRecyclerViewItemClickListener = onRecyclerViewItemClickListener;
         this.onDocumentCheckListener = onDocumentCheckListener;

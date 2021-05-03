@@ -25,7 +25,7 @@ import com.google.firebase.firestore.ListenerRegistration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParentAdoptionRequestActivity extends AppCompatActivity {
+public class ParentAdoptionRequestsListActivity extends AppCompatActivity {
 
     private static final String TAG = "AdoptionRequest";
     private static final String APP_SHARED_PREFERENCES = "APP-PREFERENCES";
@@ -41,6 +41,7 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
     private ListenerRegistration parentDocListener;
 
     private ParentSelectedChildrenListAdapter adapter;
+    private ArrayList<ChildModel> children;
     private FirebaseFirestore firestore;
 
     @Override
@@ -51,10 +52,10 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
 
-        SharedPreferences preferences = getSharedPreferences(APP_SHARED_PREFERENCES,MODE_PRIVATE);
-        String emailId = preferences.getString(PARENT_EMAIL_ID,null);
+        SharedPreferences preferences = getSharedPreferences(APP_SHARED_PREFERENCES, MODE_PRIVATE);
+        String emailId = preferences.getString(PARENT_EMAIL_ID, null);
 
-        if(emailId != null) {
+        if (emailId != null) {
             parentsDocReference = firestore.collection(COLLECTION_PATH).document(emailId);
         }
     }
@@ -63,7 +64,7 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        try {
+        if (parentsDocReference != null) {
             parentDocListener = parentsDocReference.addSnapshotListener((snapshot, error) -> {
 
                 if (error != null) {
@@ -77,10 +78,10 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
                     childrenDocuments = (List<DocumentReference>) snapshot.get(PARENT_REQUESTED_CHILDREN);
 
                     if (childrenDocuments != null) {
-                        Log.d(TAG, "76 : onComplete : " + childrenDocuments.toString());
-                        ArrayList<ChildModel> children = new ArrayList<ChildModel>();
+                        Log.d(TAG, "82 : onComplete : " + childrenDocuments.toString());
+                        children = new ArrayList<ChildModel>();
 
-                        for(DocumentReference childDocument : childrenDocuments) {
+                        for (DocumentReference childDocument : childrenDocuments) {
                             childDocument.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                 @Override
                                 public void onSuccess(DocumentSnapshot snapshot) {
@@ -99,15 +100,16 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
                     Log.d(TAG, "No such document or Current data: null");
                 }
             });
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        parentDocListener.remove();
+
+        if (parentDocListener != null) {
+            parentDocListener.remove();
+        }
     }
 
     private void removeSelectedChild(DocumentReference selectedChildDocReference) {
@@ -117,8 +119,6 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
 
     private void setupParentSelectedChildrenList(List<ChildModel> children) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        linearLayoutManager.setReverseLayout(true);
-        linearLayoutManager.setStackFromEnd(true);
         binding.rvParentSelectedChildrenList.setLayoutManager(linearLayoutManager);
 
         new ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(binding.rvParentSelectedChildrenList);
@@ -138,15 +138,24 @@ public class ParentAdoptionRequestActivity extends AppCompatActivity {
             RecyclerView.Adapter<? extends RecyclerView.ViewHolder> parentAdapter = viewHolder.getBindingAdapter();
 
             if (parentAdapter != null) {
-                int position = viewHolder.getBindingAdapterPosition();
-                DocumentReference selectedChildDocReference = childrenDocuments.get(position);
+                int position = viewHolder.getAbsoluteAdapterPosition();
+                String childId = children.get(position).getChildId();
 
-                Snackbar.make(viewHolder.itemView, "You have removed the selected child", Snackbar.LENGTH_LONG)
-                        .setAnchorView(viewHolder.itemView)
-                        .show();
+                for(DocumentReference selectedChildDocReference : childrenDocuments) {
+                    Log.d(TAG, "onSwiped: " + selectedChildDocReference.getId());
 
-                removeSelectedChild(selectedChildDocReference);
-                adapter.notifyItemRemoved(position);
+                    if(childId.equals(selectedChildDocReference.getId())){
+                        adapter.notifyItemRemoved(position);
+                        removeSelectedChild(selectedChildDocReference);
+                        childrenDocuments.remove(position);
+
+                        Snackbar.make(viewHolder.itemView, "You have removed the selected child", Snackbar.LENGTH_LONG)
+                                .setAnchorView(viewHolder.itemView)
+                                .show();
+
+                        return;
+                    }
+                }
             }
         }
     };

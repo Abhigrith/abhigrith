@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.abhigrith.R;
 import com.example.abhigrith.adoption.models.ChildModel;
-import com.example.abhigrith.databinding.ActivityOrphanageChildDetailBinding;
+import com.example.abhigrith.databinding.ActivityAdoptionOrphanageChildDetailBinding;
 import com.example.abhigrith.enums.Gender;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,7 +21,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class OrphanageChildDetailActivity extends AppCompatActivity {
+public class AdoptionOrphanageChildDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "OrphanChild";
     private static final String CHILD_DETAIL_MODEL = "CHILD_MODEL";
@@ -29,7 +29,7 @@ public class OrphanageChildDetailActivity extends AppCompatActivity {
     private static final String APP_SHARED_PREFERENCES = "APP-PREFERENCES";
     private static final String PARENT_DOCUMENT_NAME = "parent-email-id";
 
-    private ActivityOrphanageChildDetailBinding binding;
+    private ActivityAdoptionOrphanageChildDetailBinding binding;
     private FirebaseFirestore firestore;
     private DocumentReference parentDocRef;
     private DocumentReference childDocRef;
@@ -37,7 +37,7 @@ public class OrphanageChildDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityOrphanageChildDetailBinding.inflate(getLayoutInflater());
+        binding = ActivityAdoptionOrphanageChildDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         firestore = FirebaseFirestore.getInstance();
@@ -79,12 +79,12 @@ public class OrphanageChildDetailActivity extends AppCompatActivity {
 
     private void setChildDetailData(ChildModel child) {
         if (child.getChildGender().equals(Gender.MALE.getGender())) {
-            Glide.with(OrphanageChildDetailActivity.this)
+            Glide.with(AdoptionOrphanageChildDetailActivity.this)
                     .load(child.getChildImageUrl())
                     .error(R.drawable.male_child_profile)
                     .into(binding.ivOrphanageChildDetailProfileImage);
         } else {
-            Glide.with(OrphanageChildDetailActivity.this)
+            Glide.with(AdoptionOrphanageChildDetailActivity.this)
                     .load(child.getChildImageUrl())
                     .error(R.drawable.female_child_profile)
                     .into(binding.ivOrphanageChildDetailProfileImage);

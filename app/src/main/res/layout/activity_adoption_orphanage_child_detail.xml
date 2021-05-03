@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_splash"
     android:orientation="vertical"
-    tools:context=".adoption.activities.OrphanageChildDetailActivity">
+    tools:context=".adoption.activities.AdoptionOrphanageChildDetailActivity">
 
     <include
         android:id="@+id/action_bar"

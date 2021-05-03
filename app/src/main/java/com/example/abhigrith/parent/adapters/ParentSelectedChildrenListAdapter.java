@@ -16,7 +16,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
 
-public class ParentSelectedChildrenListAdapter extends RecyclerView.Adapter<ParentSelectedChildrenListAdapter.ChildViewHolder2> {
+public class ParentSelectedChildrenListAdapter extends RecyclerView.Adapter<ParentSelectedChildrenListAdapter.ChildViewHolder> {
 
     private RecyclerViewParentChildAdoptionListItemBinding binding;
     private List<ChildModel> children;
@@ -27,13 +27,13 @@ public class ParentSelectedChildrenListAdapter extends RecyclerView.Adapter<Pare
 
     @NonNull
     @Override
-    public ChildViewHolder2 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ChildViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = RecyclerViewParentChildAdoptionListItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
-        return new ChildViewHolder2(binding);
+        return new ChildViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChildViewHolder2 holder, int position) {
+    public void onBindViewHolder(@NonNull ChildViewHolder holder, int position) {
         holder.bindChildData(children.get(position));
     }
 
@@ -42,10 +42,10 @@ public class ParentSelectedChildrenListAdapter extends RecyclerView.Adapter<Pare
         return children.size();
     }
 
-    public class ChildViewHolder2 extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ChildViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private RecyclerViewParentChildAdoptionListItemBinding binding;
 
-        public ChildViewHolder2(RecyclerViewParentChildAdoptionListItemBinding binding) {
+        public ChildViewHolder(RecyclerViewParentChildAdoptionListItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
             itemView.setOnClickListener(this);
@@ -65,7 +65,7 @@ public class ParentSelectedChildrenListAdapter extends RecyclerView.Adapter<Pare
             }
 
             binding.tvParentAdoptionRequestChildFullName.setText(model.getChildFullName());
-            binding.tvParentAdoptionRequestChildDateOfGender.setText(model.getChildGender());
+            binding.tvParentAdoptionRequestChildGender.setText(model.getChildGender());
             binding.tvParentAdoptionRequestChildDateOfBirth.setText(model.getChildDateOfBirth());
         }
 

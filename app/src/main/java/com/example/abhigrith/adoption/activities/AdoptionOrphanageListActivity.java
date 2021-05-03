@@ -8,28 +8,27 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.abhigrith.adoption.adapters.OrphanageListAdapter;
+import com.example.abhigrith.adoption.adapters.AdoptionOrphanageListAdapter;
 import com.example.abhigrith.adoption.interfaces.OnDocumentCheckListener;
 import com.example.abhigrith.adoption.interfaces.OnRecyclerViewItemClickListener;
-import com.example.abhigrith.databinding.ActivityOrphanageListBinding;
+import com.example.abhigrith.databinding.ActivityAdoptionOrphanageListBinding;
 import com.example.abhigrith.orphanage.models.OrphanageModel;
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class OrphanageListActivity extends AppCompatActivity implements OnRecyclerViewItemClickListener, OnDocumentCheckListener {
+public class AdoptionOrphanageListActivity extends AppCompatActivity implements OnRecyclerViewItemClickListener, OnDocumentCheckListener {
 
     private static final String TAG = "OrphanageList";
     private static final String ORPHANAGE_COLLECTION_PATH = "orphanage_info";
     private static final String ORPHANAGE_DOCUMENT_NAME = "ORPHANAGE_DOCUMENT_NAME";
     private static final String ORPHANAGE_NAME_FIELD = "orphanageName";
 
-    private ActivityOrphanageListBinding binding;
+    private ActivityAdoptionOrphanageListBinding binding;
     private FirebaseFirestore firestore;
     private FirestoreRecyclerOptions<OrphanageModel> options;
-    private FirestoreRecyclerAdapter adapter;
+    private AdoptionOrphanageListAdapter adapter;
 
     @Override
     protected void onStart() {
@@ -40,7 +39,7 @@ public class OrphanageListActivity extends AppCompatActivity implements OnRecycl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityOrphanageListBinding.inflate(getLayoutInflater());
+        binding = ActivityAdoptionOrphanageListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         firestore = FirebaseFirestore.getInstance();
@@ -58,8 +57,8 @@ public class OrphanageListActivity extends AppCompatActivity implements OnRecycl
 
         Log.d(TAG, "These are some events " + options.getSnapshots().toString());
 
-        adapter = new OrphanageListAdapter(this, this, options);
-        binding.rvActivityOrphanageListOrphanages.setLayoutManager(new LinearLayoutManager(OrphanageListActivity.this));
+        adapter = new AdoptionOrphanageListAdapter(this, this, options);
+        binding.rvActivityOrphanageListOrphanages.setLayoutManager(new LinearLayoutManager(AdoptionOrphanageListActivity.this));
         binding.rvActivityOrphanageListOrphanages.setAdapter(adapter);
     }
 
@@ -77,7 +76,7 @@ public class OrphanageListActivity extends AppCompatActivity implements OnRecycl
             String orphanageName = (String) options.getSnapshots().getSnapshot(position).get("orphanageName");
             Log.d(TAG, "OrphanageName: " + orphanageName);
 
-            Intent intent = new Intent(OrphanageListActivity.this, OrphanageChildrenListActivity.class);
+            Intent intent = new Intent(AdoptionOrphanageListActivity.this, AdoptionOrphanageChildrenListActivity.class);
             intent.putExtra(ORPHANAGE_DOCUMENT_NAME, orphanageDocumentName);
             intent.putExtra(ORPHANAGE_NAME_FIELD,orphanageName);
             startActivity(intent);

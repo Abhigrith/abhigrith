@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.abhigrith.adoption.activities.OrphanageListActivity;
+import com.example.abhigrith.adoption.activities.AdoptionOrphanageListActivity;
 import com.example.abhigrith.databinding.ActivityParentDashboardBinding;
 
 public class ParentDashboardActivity extends AppCompatActivity {
@@ -25,12 +25,12 @@ public class ParentDashboardActivity extends AppCompatActivity {
         });
 
         binding.btnDashboardSelection.setOnClickListener(v ->{
-            Intent intent = new Intent(this, OrphanageListActivity.class);
+            Intent intent = new Intent(this, AdoptionOrphanageListActivity.class);
             startActivity(intent);
         });
 
         binding.btnDashboardSelector.setOnClickListener(v ->{
-            Intent intent = new Intent(this,ParentAdoptionRequestActivity.class);
+            Intent intent = new Intent(this, ParentAdoptionRequestsListActivity.class);
             startActivity(intent);
         });
     }

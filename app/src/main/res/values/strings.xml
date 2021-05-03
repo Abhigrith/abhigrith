@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">abhigrith</string>
     <string name="orphanage_title">List Of Children In The %s Orphanage</string>
+    <string name="parent_name_01">Name : %s</string>
+    <string name="parent_gender_01">Gender : %s</string>
+    <string name="parent_date_of_birth_01">Date Of Birth : %s</string>
+    <string name="parent_income_01">Income : %s</string>
+    <string name="parent_name_02">Name : %s</string>
+    <string name="parent_gender_02">Gender : %s</string>
+    <string name="parent_date_of_birth_02">Date Of Birth : %s</string>
+    <string name="parent_income_02">Income : %s</string>
+    <string name="parent_primary_address">Primary Address : %s</string>
+    <string name="parent_secondary_address">Secondary Address : %s</string>
+    <string name="parent_city">City : %s</string>
+    <string name="parent_district">District : %s</string>
+    <string name="parent_pincode">Pincode : %s</string>
+    <string name="parent_state">State : %s</string>
+    <string name="parent_email">Email : %s</string>
+    <string name="parent_primary_phone_number">Primary Phone Number : %s</string>
+    <string name="parent_secondary_phone_number">Secondary Phone Number : %s</string>
 </resources>

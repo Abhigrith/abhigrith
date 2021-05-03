@@ -17,14 +17,14 @@ import com.example.abhigrith.enums.Gender;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-public class OrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<ChildModel, OrphanageChildrenListAdapter.OrphanageChildrenViewHolder> {
+public class AdoptionOrphanageChildrenListAdapter extends FirestoreRecyclerAdapter<ChildModel, AdoptionOrphanageChildrenListAdapter.OrphanageChildrenViewHolder> {
 
     private FirestoreRecyclerOptions<ChildModel> options;
     private RecyclerViewChildListItemBinding binding;
     private OnDocumentCheckListener onDocumentCheckListener;
     private OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
 
-    public OrphanageChildrenListAdapter(OnDocumentCheckListener onDocumentCheckListener, OnRecyclerViewItemClickListener onRecyclerViewItemClickListener, @NonNull FirestoreRecyclerOptions<ChildModel> options) {
+    public AdoptionOrphanageChildrenListAdapter(OnDocumentCheckListener onDocumentCheckListener, OnRecyclerViewItemClickListener onRecyclerViewItemClickListener, @NonNull FirestoreRecyclerOptions<ChildModel> options) {
         super(options);
         this.onDocumentCheckListener = onDocumentCheckListener;
         this.onRecyclerViewItemClickListener = onRecyclerViewItemClickListener;

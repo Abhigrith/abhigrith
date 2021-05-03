@@ -1,6 +1,7 @@
 package com.example.abhigrith.orphanage.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -13,11 +14,17 @@ import com.example.abhigrith.orphanage.models.OrphanageModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class OrphanageLoginActivity extends AppCompatActivity {
+
     private static final String TAG = "OrphanageLogin";
+    private static final String APP_PREFERENCES = "APP-PREFERENCES";
+    private static final String ORPHANAGE_ID = "orphanageId";
+    private static final String ORPHANAGE_COLLECTION_NAME = "orphanage_info";
 
     private ActivityOrphanageLoginBinding binding;
     private FirebaseFirestore firestoreInstance;
@@ -30,7 +37,7 @@ public class OrphanageLoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         firestoreInstance = FirebaseFirestore.getInstance();
-        orphanageInfoCollection = firestoreInstance.collection("orphanage_info");
+        orphanageInfoCollection = firestoreInstance.collection(ORPHANAGE_COLLECTION_NAME);
 
         binding.btnOrphanageLoginRegister.setOnClickListener(v -> {
             startActivity(new Intent(OrphanageLoginActivity.this, OrphanageRegisterActivity.class));
@@ -51,7 +58,7 @@ public class OrphanageLoginActivity extends AppCompatActivity {
 
     private void doesOrphanageExistsAndGetOrphanageLoggedIn(String orphanageId, String password) {
         // Check whether orphanageId and password exist or not
-        Task<DocumentSnapshot> documentSnapshotTask = orphanageInfoCollection.document(orphanageId)
+        orphanageInfoCollection.document(orphanageId)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -67,6 +74,9 @@ public class OrphanageLoginActivity extends AppCompatActivity {
                                         Toast.makeText(OrphanageLoginActivity.this, "You have entered the wrong password.Please enter the correct password.", Toast.LENGTH_SHORT).show();
                                         return;
                                     }
+
+                                    SharedPreferences preferences = getSharedPreferences(APP_PREFERENCES,MODE_PRIVATE);
+                                    preferences.edit().putString(ORPHANAGE_ID,model.getOrphanageId()).apply();
 
                                     Toast.makeText(OrphanageLoginActivity.this, "Getting you logged in inside the app.", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(OrphanageLoginActivity.this, OrphanageDashboardActivity.class));

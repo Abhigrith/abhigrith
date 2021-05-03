@@ -48,7 +48,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/tv_parent_adoption_request_child_date_of_gender"
+                android:id="@+id/tv_parent_adoption_request_child_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Gender"

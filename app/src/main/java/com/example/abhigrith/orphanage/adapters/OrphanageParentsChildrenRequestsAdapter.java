@@ -50,25 +50,25 @@ public class OrphanageParentsChildrenRequestsAdapter extends RecyclerView.Adapte
         }
 
         public void bindParentsData(ParentsDetailModel model) {
-            binding.tvParentProfileName01.setText(itemView.getContext().getString(R.string.parent_name_01,model.getFirstParent().getFullName()));
-            binding.tvParentProfileGender01.setText(itemView.getContext().getString(R.string.parent_gender_01,model.getFirstParent().getGender()));
-            binding.tvParentProfileDob01.setText(itemView.getContext().getString(R.string.parent_date_of_birth_01,model.getFirstParent().getDateOfBirth()));
-            binding.tvParentProfileIncome01.setText(itemView.getContext().getString(R.string.parent_income_01,String.valueOf(model.getFirstParent().getIncome())));
+            binding.tvParentProfileName01.setText(model.getFirstParent().getFullName());
+            binding.tvParentProfileGender01.setText(model.getFirstParent().getGender());
+            binding.tvParentProfileDob01.setText(model.getFirstParent().getDateOfBirth());
+            binding.tvParentProfileIncome01.setText(String.valueOf(model.getFirstParent().getIncome()));
 
-            binding.tvParentProfileName02.setText(itemView.getContext().getString(R.string.parent_name_02,model.getSecondParent().getFullName()));
-            binding.tvParentProfileGender02.setText(itemView.getContext().getString(R.string.parent_gender_02,model.getSecondParent().getGender()));
-            binding.tvParentProfileDob02.setText(itemView.getContext().getString(R.string.parent_date_of_birth_02,model.getSecondParent().getDateOfBirth()));
-            binding.tvParentProfileIncome02.setText(itemView.getContext().getString(R.string.parent_income_02,String.valueOf(model.getSecondParent().getIncome())));
+            binding.tvParentProfileName02.setText(model.getSecondParent().getFullName());
+            binding.tvParentProfileGender02.setText(model.getSecondParent().getGender());
+            binding.tvParentProfileDob02.setText(model.getSecondParent().getDateOfBirth());
+            binding.tvParentProfileIncome02.setText(String.valueOf(model.getSecondParent().getIncome()));
 
-            binding.tvParentProfilePrimaryAddress.setText(itemView.getContext().getString(R.string.parent_primary_address,model.getAddress().getPrimaryAddress()));
-            binding.tvParentProfileSecondaryAddress.setText(itemView.getContext().getString(R.string.parent_secondary_address,model.getAddress().getSecondaryAddress()));
-            binding.tvParentProfileCity.setText(itemView.getContext().getString(R.string.parent_city,model.getAddress().getCity()));
-            binding.tvParentProfileDistrict.setText(itemView.getContext().getString(R.string.parent_district,model.getAddress().getDistrict()));
-            binding.tvParentProfilePincode.setText(itemView.getContext().getString(R.string.parent_pincode,model.getAddress().getPincode()));
-            binding.tvParentProfileState.setText(itemView.getContext().getString(R.string.parent_state,model.getAddress().getState()));
+            binding.tvParentProfilePrimaryAddress.setText(model.getAddress().getPrimaryAddress());
+            binding.tvParentProfileSecondaryAddress.setText(model.getAddress().getSecondaryAddress());
+            binding.tvParentProfileCity.setText(model.getAddress().getCity());
+            binding.tvParentProfileDistrict.setText(model.getAddress().getDistrict());
+            binding.tvParentProfilePincode.setText(model.getAddress().getPincode());
+            binding.tvParentProfileState.setText(model.getAddress().getState());
 
-            binding.tvParentProfilePrimaryPhone.setText(itemView.getContext().getString(R.string.parent_primary_phone_number,model.getPrimaryContactNumber()));
-            binding.tvParentProfileSecondaryPhone.setText(itemView.getContext().getString(R.string.parent_secondary_phone_number,model.getSecondaryContactNumber()));
+            binding.tvParentProfilePrimaryPhone.setText(model.getPrimaryContactNumber());
+            binding.tvParentProfileSecondaryPhone.setText(model.getSecondaryContactNumber());
         }
 
         @Override

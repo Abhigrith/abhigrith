@@ -6,21 +6,21 @@
     android:orientation="vertical"
     tools:context=".orphanage.activities.OrphanageParentsAdoptionRequestsForChildrenActivity">
 
-    <TextView
-        android:id="@+id/tv_activity_orphanage_parent_adoption_requests_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Requested Parents For This Child"
-        android:textAlignment="center"
-        android:textSize="25sp" />
-
     <include
         android:id="@+id/cv_child_item_data"
         layout="@layout/recycler_view_parent_child_adoption_list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tv_activity_orphanage_parent_adoption_requests_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Requested Parents For This Child"
+        android:textAlignment="center"
+        android:textSize="25sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_activity_orphanage_parent_adoption_requests_list_for_child"

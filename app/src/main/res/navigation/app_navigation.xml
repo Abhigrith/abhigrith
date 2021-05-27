@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.abhigrith.ui.fragments.SplashScreenFragment"
+        android:label="SplashScreenFragment" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.abhigrith.ui.fragments.DashboardFragment"
+        android:label="DashboardFragment"
+        app:startDestination="@id/action_dashboardFragment_to_orphanageLoginFragment">
+        <action
+            android:id="@+id/action_dashboardFragment_to_parentLoginFragment"
+            app:destination="@id/parentLoginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_orphanageLoginFragment"
+            app:destination="@id/orphanageLoginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentLoginFragment"
+        android:name="com.example.abhigrith.ui.fragments.parents.ParentLoginFragment"
+        android:label="ParentLoginFragment" >
+        <action
+            android:id="@+id/action_parentLoginFragment_to_parentRegisterFragment"
+            app:destination="@id/parentRegisterFragment" />
+        <action
+            android:id="@+id/action_parentLoginFragment_to_parentDashboardFragment"
+            app:destination="@id/parentDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentRegisterFragment"
+        android:name="com.example.abhigrith.ui.fragments.parents.ParentRegisterFragment"
+        android:label="ParentRegisterFragment" >
+        <action
+            android:id="@+id/action_parentRegisterFragment_to_parentLoginFragment"
+            app:destination="@id/parentLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentDashboardFragment"
+        android:name="com.example.abhigrith.ui.fragments.parents.ParentDashboardFragment"
+        android:label="ParentDashboardFragment" >
+        <action
+            android:id="@+id/action_parentDashboardFragment_to_parentProfileFragment"
+            app:destination="@id/parentProfileFragment" />
+        <action
+            android:id="@+id/action_parentDashboardFragment_to_parentAdoptionRequestsListFragment"
+            app:destination="@id/parentAdoptionRequestsListFragment" />
+        <action
+            android:id="@+id/action_parentDashboardFragment_to_adoptionOrphanageListFragment"
+            app:destination="@id/adoptionOrphanageListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parentProfileFragment"
+        android:name="com.example.abhigrith.ui.fragments.parents.ParentProfileFragment"
+        android:label="ParentProfileFragment" />
+    <fragment
+        android:id="@+id/parentAdoptionRequestsListFragment"
+        android:name="com.example.abhigrith.ui.fragments.parents.ParentAdoptionRequestsListFragment"
+        android:label="ParentAdoptionRequestsListFragment" />
+    <fragment
+        android:id="@+id/orphanageLoginFragment"
+        android:name="com.example.abhigrith.ui.fragments.orphanage.OrphanageLoginFragment"
+        android:label="OrphanageLoginFragment" >
+        <action
+            android:id="@+id/action_orphanageLoginFragment_to_orphanageRegisterFragment"
+            app:destination="@id/orphanageRegisterFragment" />
+        <action
+            android:id="@+id/action_orphanageLoginFragment_to_orphanageDashboardFragment"
+            app:destination="@id/orphanageDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orphanageRegisterFragment"
+        android:name="com.example.abhigrith.ui.fragments.orphanage.OrphanageRegisterFragment"
+        android:label="OrphanageRegisterFragment" >
+        <action
+            android:id="@+id/action_orphanageRegisterFragment_to_orphanageLoginFragment"
+            app:destination="@id/orphanageLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orphanageDashboardFragment"
+        android:name="com.example.abhigrith.ui.fragments.orphanage.OrphanageDashboardFragment"
+        android:label="OrphanageDashboardFragment" >
+        <action
+            android:id="@+id/action_orphanageDashboardFragment_to_orphanageChildrenListFragment"
+            app:destination="@id/orphanageChildrenListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orphanageChildrenListFragment"
+        android:name="com.example.abhigrith.ui.fragments.orphanage.OrphanageChildrenListFragment"
+        android:label="OrphanageChildrenListFragment" >
+        <action
+            android:id="@+id/action_orphanageChildrenListFragment_to_orphanageParentsAdoptionRequestsForChildrenFragment"
+            app:destination="@id/orphanageParentsAdoptionRequestsForChildrenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orphanageParentsAdoptionRequestsForChildrenFragment"
+        android:name="com.example.abhigrith.ui.fragments.orphanage.OrphanageParentsAdoptionRequestsForChildFragment"
+        android:label="OrphanageParentsAdoptionRequestsForChildrenFragment" >
+        <argument
+            android:name="child"
+            app:argType="com.example.abhigrith.models.ChildModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/adoptionOrphanageChildDetailFragment"
+        android:name="com.example.abhigrith.ui.fragments.adoption.AdoptionOrphanageChildDetailFragment"
+        android:label="AdoptionOrphanageChildDetailFragment" >
+        <argument
+            android:name="orphanageDocumentName"
+            app:argType="string" />
+        <argument
+            android:name="child"
+            app:argType="com.example.abhigrith.models.ChildModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/adoptionOrphanageListFragment"
+        android:name="com.example.abhigrith.ui.fragments.adoption.AdoptionOrphanageListFragment"
+        android:label="AdoptionOrphanageListFragment" >
+        <action
+            android:id="@+id/action_adoptionOrphanageListFragment_to_adoptionOrphanageChildrenListFragment"
+            app:destination="@id/adoptionOrphanageChildrenListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adoptionOrphanageChildrenListFragment"
+        android:name="com.example.abhigrith.ui.fragments.adoption.AdoptionOrphanageChildrenListFragment"
+        android:label="AdoptionOrphanageChildrenListFragment" >
+        <action
+            android:id="@+id/action_adoptionOrphanageChildrenListFragment_to_adoptionOrphanageChildDetailFragment"
+            app:destination="@id/adoptionOrphanageChildDetailFragment" />
+        <argument
+            android:name="orphanageDocumentName"
+            app:argType="string" />
+        <argument android:name="orphanageName" />
+    </fragment>
+</navigation>

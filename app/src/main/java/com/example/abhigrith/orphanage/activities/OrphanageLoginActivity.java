@@ -24,6 +24,7 @@ public class OrphanageLoginActivity extends AppCompatActivity {
     private static final String TAG = "OrphanageLogin";
     private static final String APP_PREFERENCES = "APP-PREFERENCES";
     private static final String ORPHANAGE_ID = "orphanageId";
+    private static final String ORPHANAGE_NAME = "orphanageName";
     private static final String ORPHANAGE_COLLECTION_NAME = "orphanage_info";
 
     private ActivityOrphanageLoginBinding binding;
@@ -76,7 +77,7 @@ public class OrphanageLoginActivity extends AppCompatActivity {
                                     }
 
                                     SharedPreferences preferences = getSharedPreferences(APP_PREFERENCES,MODE_PRIVATE);
-                                    preferences.edit().putString(ORPHANAGE_ID,model.getOrphanageId()).apply();
+                                    preferences.edit().putString(ORPHANAGE_ID,model.getOrphanageId()).putString(ORPHANAGE_NAME,model.getOrphanageName()).apply();
 
                                     Toast.makeText(OrphanageLoginActivity.this, "Getting you logged in inside the app.", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(OrphanageLoginActivity.this, OrphanageDashboardActivity.class));

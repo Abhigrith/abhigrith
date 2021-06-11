@@ -1,7 +1,7 @@
 package com.example.abhigrith.enums;
 
 public enum Gender {
-    MALE("Male"), FEMALE("Female"), Others("Others");
+    MALE("Male"), FEMALE("Female"), OTHERS("Others");
 
     private String gender;
 

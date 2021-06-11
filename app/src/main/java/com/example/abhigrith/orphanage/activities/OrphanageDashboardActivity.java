@@ -24,5 +24,12 @@ public class OrphanageDashboardActivity extends AppCompatActivity {
                 startActivity(new Intent(OrphanageDashboardActivity.this, OrphanageChildrenListActivity.class));
             }
         });
+
+        binding.btnAddChild.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(OrphanageDashboardActivity.this, OrphanageAddChildActivity.class));
+            }
+        });
     }
 }

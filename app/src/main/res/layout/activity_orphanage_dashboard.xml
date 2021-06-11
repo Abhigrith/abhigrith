@@ -17,4 +17,11 @@
         android:textColor="@color/black"
         android:text="ChildrenList" />
 
+    <Button
+        android:id="@+id/btn_add_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add Child" />
+
 </LinearLayout>

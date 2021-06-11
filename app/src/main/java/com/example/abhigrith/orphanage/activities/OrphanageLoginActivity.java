@@ -80,7 +80,7 @@ public class OrphanageLoginActivity extends AppCompatActivity {
                                     preferences.edit().putString(ORPHANAGE_ID,model.getOrphanageId()).putString(ORPHANAGE_NAME,model.getOrphanageName()).apply();
 
                                     Toast.makeText(OrphanageLoginActivity.this, "Getting you logged in inside the app.", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(OrphanageLoginActivity.this, OrphanageDashboardActivity.class));
+                                    startActivity(new Intent(OrphanageLoginActivity.this, OrphanageChildrenListActivity.class));
                                 }
                             } else {
                                 Log.d(TAG, "No such document");

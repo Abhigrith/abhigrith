@@ -12,6 +12,7 @@ import com.example.abhigrith.adoption.interfaces.OnDocumentCheckListener;
 import com.example.abhigrith.adoption.interfaces.OnRecyclerViewItemClickListener;
 import com.example.abhigrith.adoption.models.ChildModel;
 import com.example.abhigrith.databinding.ActivityAdoptionOrphanageChildrenListBinding;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;

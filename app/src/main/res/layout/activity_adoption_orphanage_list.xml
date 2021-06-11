@@ -7,16 +7,12 @@
     android:orientation="vertical"
     tools:context=".adoption.activities.AdoptionOrphanageListActivity">
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_activity_orphanage_list_orphanages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_splash"
+        android:background="@color/color_primary"
         android:orientation="vertical"
         tools:listitem="@layout/recycler_view_orphanage_list_item" />
 

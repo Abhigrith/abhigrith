@@ -5,14 +5,15 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
     android:layout_marginVertical="20dp"
-    http:cardCornerRadius="40dp"
-    http:cardElevation="30dp"
+    http:cardCornerRadius="20dp"
+    http:cardElevation="20dp"
     http:cardPreventCornerOverlap="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:background="@color/color_secondary"
         android:orientation="horizontal">
 
         <ImageView

@@ -5,21 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="@color/color_primary"
     tools:context=".orphanage.activities.OrphanageDashboardActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/samarkan"
-        android:text="Work under proccess..!!!!!!"
-        android:textAlignment="center"
-        android:textSize="40sp" />
 
     <Button
         android:id="@+id/btn_children_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/black"
         android:text="ChildrenList" />
 
 </LinearLayout>

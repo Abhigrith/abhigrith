@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_splash"
+    android:background="@color/color_primary"
     android:orientation="vertical"
     tools:context=".adoption.activities.AdoptionOrphanageChildDetailActivity">
 
@@ -36,7 +36,7 @@
             android:text="Child FullName"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/white"
+            android:textColor="@color/color_ascent"
             android:textSize="32sp" />
 
         <LinearLayout

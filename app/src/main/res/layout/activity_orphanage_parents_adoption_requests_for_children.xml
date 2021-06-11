@@ -27,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@color/color_secondary"
         tools:listitem="@layout/recycler_view_parent_auth_requests_for_child" />
 
 </LinearLayout>

@@ -16,10 +16,10 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 public class AdoptionOrphanageListAdapter extends FirestoreRecyclerAdapter<OrphanageModel, AdoptionOrphanageListAdapter.OrphanageViewHolder> {
 
-    private FirestoreRecyclerOptions<OrphanageModel> options;
+    private final FirestoreRecyclerOptions<OrphanageModel> options;
     private RecyclerViewOrphanageListItemBinding binding;
-    private OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
-    private OnDocumentCheckListener onDocumentCheckListener;
+    private final OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
+    private final OnDocumentCheckListener onDocumentCheckListener;
 
     public AdoptionOrphanageListAdapter(OnRecyclerViewItemClickListener onRecyclerViewItemClickListener, OnDocumentCheckListener onDocumentCheckListener, @NonNull FirestoreRecyclerOptions<OrphanageModel> options) {
         super(options);
@@ -56,7 +56,7 @@ public class AdoptionOrphanageListAdapter extends FirestoreRecyclerAdapter<Orpha
 
     public class OrphanageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private RecyclerViewOrphanageListItemBinding binding;
+        private final RecyclerViewOrphanageListItemBinding binding;
 
         public OrphanageViewHolder(@NonNull RecyclerViewOrphanageListItemBinding binding) {
             super(binding.getRoot());
@@ -72,11 +72,6 @@ public class AdoptionOrphanageListAdapter extends FirestoreRecyclerAdapter<Orpha
         private void bindOrphanageView(OrphanageModel model) {
             binding.tvOrphanageName.setText(model.getOrphanageName());
             binding.tvOrphanageCity.setText(model.getOrphanageAddress().getCity());
-            binding.tvOrphanagePincode.setText(model.getOrphanageAddress().getPincode());
-            binding.tvOrphanageState.setText(model.getOrphanageAddress().getState());
-            binding.tvOrphanageEmail.setText(model.getOrphanageEmail());
-            binding.tvOrphanagePrimaryPhone.setText(model.getOrphanagePrimaryPhoneNumber());
-            binding.tvOrphanageSecondaryPhone.setText(model.getOrphanageSecondaryPhoneNumber());
         }
     }
 }

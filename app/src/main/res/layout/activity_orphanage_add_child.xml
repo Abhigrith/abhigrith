@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/color_primary"
     tools:context=".orphanage.activities.OrphanageAddChildActivity">
 
     <TextView
@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Add a new child"
+        android:textColor="@color/color_ascent"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -36,8 +37,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/round_button_auth"
                     android:hint="Child Name"
+                    android:background="@color/color_secondary"
                     android:inputType="text"
                     android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -52,9 +53,9 @@
                     android:id="@+id/et_orphanage_add_child_orphanage_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
                     android:layout_marginTop="16dp"
                     android:hint="Child Orphanage-ID"
+                    android:background="@color/color_secondary"
                     android:inputType="text"
                     android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -63,7 +64,8 @@
                 android:id="@+id/tv_orphanage_add_child_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_margin="20dp"
+                android:textColor="@color/color_ascent"
                 android:text="CHOOSE AN IMAGE FOR THIS CHILD"
                 android:textAlignment="center"
                 android:textSize="20sp" />
@@ -71,7 +73,7 @@
             <ImageView
                 android:id="@+id/iv_orphanage_add_child_profile_img"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="50dp"
                 android:adjustViewBounds="true"
@@ -86,13 +88,13 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"
                 android:text="Choose"
+                android:background="@color/color_ascent"
                 android:textAlignment="center" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dropdown_menu_gender"
                 android:hint="Child Gender"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-                android:backgroundTint="@drawable/round_button_auth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -101,6 +103,7 @@
                 <AutoCompleteTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/color_secondary"
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Child Date-Of-Birth"
                     android:inputType="none"
                     android:text="" />
@@ -127,6 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_button"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/aclonica"
                 android:text="Add in orphanage"

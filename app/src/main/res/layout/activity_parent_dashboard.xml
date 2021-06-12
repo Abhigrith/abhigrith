@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_primary"
     tools:context=".parent.activities.ParentDashboardActivity">
 
     <include
@@ -15,16 +16,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:orientation="vertical">
-
-
-        <Button
-            android:id="@+id/btn_dashboard_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn_dashboard_selection"

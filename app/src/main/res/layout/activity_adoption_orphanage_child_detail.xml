@@ -3,15 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_splash"
+    android:background="@color/color_primary"
     android:orientation="vertical"
     tools:context=".adoption.activities.AdoptionOrphanageChildDetailActivity">
 
-    <include
-        android:id="@+id/action_bar"
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_below="@id/action_bar"
@@ -36,7 +31,7 @@
             android:text="Child FullName"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/white"
+            android:textColor="@color/color_ascent"
             android:textSize="32sp" />
 
         <LinearLayout
@@ -53,7 +48,7 @@
                 android:text="Gender"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/color_ascent"
                 android:textSize="20sp" />
 
             <TextView
@@ -65,7 +60,7 @@
                 android:text="Male"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/color_secondary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -85,7 +80,7 @@
                 android:text="Date-Of-Birth"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/color_ascent"
                 android:textSize="20sp" />
 
             <TextView
@@ -97,16 +92,21 @@
                 android:text="20-07-2001"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/color_secondary"
                 android:textSize="20sp" />
         </LinearLayout>
+
 
         <Button
             android:id="@+id/btn_orphanage_child_detail_adopt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginHorizontal="20dp"
-            android:background="@drawable/round_button_auth"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/rounded_button"
+            android:padding="5dp"
+            android:textAllCaps="true"
             android:text="Adopt This Kid" />
     </LinearLayout>
 

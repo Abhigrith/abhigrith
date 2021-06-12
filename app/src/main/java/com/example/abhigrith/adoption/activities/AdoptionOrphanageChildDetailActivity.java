@@ -60,7 +60,6 @@ public class AdoptionOrphanageChildDetailActivity extends AppCompatActivity {
             childDocRef = firestore.collection("orphanage_info").document(orphanageDocumentName).collection("children_info").document(child.getChildId());
 
             setChildDetailData(child);
-
             binding.btnOrphanageChildDetailAdopt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_auth"
+    android:background="@color/color_primary"
     android:orientation="vertical"
     tools:context=".parent.activities.ParentRegisterActivity">
 
@@ -18,7 +18,7 @@
         android:letterSpacing="0.1"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/color_ascent"
         android:textSize="65sp"
         android:textStyle="bold" />
 
@@ -31,13 +31,14 @@
         android:layout_marginTop="15dp"
         android:text="Create a account"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/color_ascent"
         android:textSize="20sp" />
 
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbars="vertical"
         android:layout_below="@+id/tv_activity_name">
 
         <LinearLayout
@@ -52,7 +53,7 @@
                 android:layout_marginTop="15dp"
                 android:text="First Parent"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/color_ascent"
                 android:textSize="20sp" />
 
 
@@ -68,7 +69,7 @@
                     android:id="@+id/et_parent_register_name_01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Name"
                     android:inputType="text"
                     android:text="" />
@@ -86,7 +87,7 @@
                     android:id="@+id/et_parent_register_gender_01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Gender"
                     android:inputType="text"
                     android:text="" />
@@ -105,7 +106,7 @@
                     android:id="@+id/et_parent_register_date_of_birth_01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:clickable="false"
                     android:cursorVisible="false"
                     android:focusable="false"
@@ -128,7 +129,7 @@
                     android:id="@+id/et_parent_register_income_01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Income"
                     android:inputType="numberDecimal"
                     android:text="" />
@@ -146,7 +147,7 @@
                     android:id="@+id/et_parent_register_aadhaar_number_01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Aadhar Card Number"
                     android:inputType="number"
                     android:text="" />
@@ -165,7 +166,7 @@
                     android:id="@+id/et_parent_register_pan_number_01"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Pan Card Number"
                     android:inputType="textCapWords"
                     android:text="" />
@@ -179,7 +180,7 @@
                 android:layout_marginTop="15dp"
                 android:text="Second Parent"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/color_ascent"
                 android:textSize="20sp" />
 
 
@@ -195,7 +196,7 @@
                     android:id="@+id/et_parent_register_name_02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Name"
                     android:inputType="text"
                     android:text="" />
@@ -213,7 +214,7 @@
                     android:id="@+id/et_parent_register_gender_02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Gender"
                     android:inputType="text"
                     android:text="" />
@@ -232,7 +233,7 @@
                     android:id="@+id/et_parent_register_date_of_birth_02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:clickable="false"
                     android:cursorVisible="false"
                     android:focusable="false"
@@ -255,7 +256,7 @@
                     android:id="@+id/et_parent_register_income_02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Income"
                     android:inputType="numberDecimal"
                     android:text="" />
@@ -273,7 +274,7 @@
                     android:id="@+id/et_parent_register_aadhaar_number_02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Aadhar Card Number"
                     android:inputType="number"
                     android:text="" />
@@ -292,7 +293,7 @@
                     android:id="@+id/et_parent_register_pan_number_02"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Pan Card Number"
                     android:inputType="textCapWords"
                     android:text="" />
@@ -306,7 +307,7 @@
                 android:layout_marginTop="15dp"
                 android:text="Address"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/color_ascent"
                 android:textSize="20sp" />
 
 
@@ -322,7 +323,7 @@
                     android:id="@+id/et_parent_register_primary_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Primary Address"
                     android:inputType="text"
                     android:text="" />
@@ -340,7 +341,7 @@
                     android:id="@+id/et_parent_register_secondary_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Secondary Address"
                     android:inputType="text"
                     android:text="" />
@@ -358,7 +359,7 @@
                     android:id="@+id/et_parent_register_address_city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="City"
                     android:inputType="text"
                     android:text="" />
@@ -377,7 +378,7 @@
                     android:id="@+id/et_parent_register_address_district"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="District"
                     android:inputType="text"
                     android:text="" />
@@ -396,7 +397,7 @@
                     android:id="@+id/et_parent_register_address_pincode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Pincode"
                     android:inputType="number"
                     android:text="" />
@@ -415,7 +416,7 @@
                     android:id="@+id/et_parent_register_address_state"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="State"
                     android:inputType="text"
                     android:text="" />
@@ -429,7 +430,7 @@
                 android:layout_marginTop="15dp"
                 android:text="Contact"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/color_ascent"
                 android:textSize="20sp" />
 
 
@@ -445,7 +446,7 @@
                     android:id="@+id/et_parent_register_primary_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Primary Phone Number"
                     android:inputType="phone"
                     android:text="" />
@@ -464,7 +465,7 @@
                     android:id="@+id/et_parent_register_secondary_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Secondary Phone Number"
                     android:inputType="phone"
                     android:text="" />
@@ -475,10 +476,10 @@
                 android:id="@+id/tv_parent_register_account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_margin="15dp"
                 android:text="Account"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/color_secondary"
                 android:textSize="20sp" />
 
 
@@ -494,7 +495,7 @@
                     android:id="@+id/et_parent_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:text="" />
@@ -513,7 +514,7 @@
                     android:id="@+id/et_parent_register_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:text="" />
@@ -532,7 +533,7 @@
                     android:id="@+id/et_parent_register_confirm_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_button_auth"
+                    android:background="@color/color_secondary"
                     android:hint="Confirm Password"
                     android:inputType="textPassword"
                     android:text="" />
@@ -546,8 +547,10 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginVertical="20dp"
                 android:fontFamily="@font/aclonica"
                 android:text="Register"
+                android:textColor="@color/color_ascent"
                 android:textSize="13sp" />
 
             <Button
@@ -557,6 +560,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/aclonica"
+                android:textColor="@color/color_ascent"
                 android:text="Login"
                 android:textSize="13sp" />
 

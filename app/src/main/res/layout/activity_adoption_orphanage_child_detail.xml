@@ -9,11 +9,10 @@
 
 
     <LinearLayout
-        android:layout_below="@id/action_bar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         android:orientation="vertical">
 
         <ImageView
@@ -87,8 +86,8 @@
                 android:id="@+id/tv_orphanage_child_detail_date_of_birth"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp"
                 android:layout_weight="1"
+                android:paddingHorizontal="20dp"
                 android:text="20-07-2001"
                 android:textAlignment="textStart"
                 android:textAllCaps="true"
@@ -106,8 +105,8 @@
             android:layout_marginVertical="15dp"
             android:background="@drawable/rounded_button"
             android:padding="5dp"
-            android:textAllCaps="true"
-            android:text="Adopt This Kid" />
+            android:text="Adopt This Kid"
+            android:textAllCaps="true" />
     </LinearLayout>
 
 
